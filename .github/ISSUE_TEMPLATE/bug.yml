@@ -49,6 +49,11 @@ body:
         3. Third Step
         4. See Error
   - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Visual evidence of the bug (if present)
+  - type: textarea
     id: logs
     attributes:
       label: Relevant log output
