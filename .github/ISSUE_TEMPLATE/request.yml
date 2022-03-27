@@ -1,0 +1,31 @@
+name: Feature Request
+title: 'Feature: <title>'
+description: Suggest an idea
+labels: ['enhancement']
+assignees:
+  - asharonbaltazar
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a new feature request, please search the existing issues. Your proposal may already exist. 
+
+        ---
+
+        Thank you for taking the time to file a feature request. Let's get some details about what you want to see.
+  - type: dropdown
+    id: priorty
+    attributes:
+      label: How important do you think this feature is (1 being the highest)?
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+  - type: textarea
+    id: feature-request-description
+    attributes:
+      label: Feature description
+      placeholder: I'd like to see...
+    validations:
+      required: true

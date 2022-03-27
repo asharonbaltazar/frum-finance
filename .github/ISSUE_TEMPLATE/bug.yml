@@ -1,0 +1,56 @@
+name: Bug Report
+title: '[BUG] <title>'
+description: File a bug report
+labels: ['bug', 'triage']
+assignees:
+  - asharonbaltazar
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a bug report, please search for the behaviour in the existing issues. 
+
+        ---
+
+        Thank you for taking the time to file a bug report. To address this bug efficiently, we need some information.
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      description: 'Which operating system do you use? Please provide the version as well.'
+      placeholder: 'macOS Big Sur 11.5.2'
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug description
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Which steps do we need to take to reproduce this error?
+      value: |
+        1. First Step
+        2. Second Step
+        3. Third Step
+        4. See Error
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: If applicable, provide relevant console logs. No need for backticks here.
+      render: shell
